@@ -5,6 +5,9 @@
 void printTuple(std::ostream&, const std::tuple<>&)
 {}
 
+//! process() function is made for testing purposes
+//! it has an output stream as the only argument
+//! this allows to test its output
 void process(std::ostream& outputStream)
 {
   print_ip<char>(outputStream, char{-1});

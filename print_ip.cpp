@@ -2,7 +2,8 @@
 
 #include "process.h"
 
-
+/// print_ip main function
+/// just calls process()
 int main()
 {
   process(std::cout);
