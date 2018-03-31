@@ -13,7 +13,7 @@ void process(std::ostream& outputStream)
 
   print_ip<int>(outputStream, 2130706433);
 
-  print_ip<long>(outputStream, 8875824491850138409);
+  print_ip<long long>(outputStream, 8875824491850138409);
 
   print_ip<std::string>(outputStream, "192.168.11.17.234.99");
 

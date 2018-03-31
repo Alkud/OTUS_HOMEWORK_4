@@ -12,7 +12,7 @@ void print_ip (std::ostream& outputStream,
 {
   for (int idx{sizeof(T) - 1}; idx >= 0; idx--)
   {
-    int octet{static_cast<uint8_t>(input_value >> (8 * idx))};
+    int octet{static_cast<uint8_t>((input_value >> (8 * idx))&0xFF)};
     outputStream << ( octet );
     if (idx != 0)
       outputStream << ".";
@@ -28,8 +28,8 @@ void print_ip (std::ostream& outputStream,
   {
     int octet{static_cast<uint8_t>(item)};
     outputStream << octet;
-    if (item != *(input_value).rbegin())
-      std::cout << ".";
+    if (&item != &(*(input_value).rbegin()))
+      outputStream << ".";
   }
   outputStream << std::endl;
 }
