@@ -9,7 +9,7 @@ var indexSectionsWithContent =
 {
   0: "abgimop",
   1: "ai",
-  2: "imop",
+  2: "iop",
   3: "bgmp",
   4: "b"
 };
