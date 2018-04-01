@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$structis__suitable__container.html" title="List of container types suitable for keeping an ip address */. " alt="" coords="136,5,312,32"/>
+<area shape="rect" id="node3" href="$structis__suitable__container.html" title="is_suitable_container\l\&lt; Container \&gt;" alt="" coords="152,57,296,98"/>
+<area shape="rect" id="node6" href="$structis__suitable__tuple.html" title="is_suitable_tuple\&lt; T \&gt;" alt="" coords="149,123,299,149"/>
+<area shape="rect" id="node4" href="$structis__suitable__container_3_01std_1_1queue_3_01_t_00_01_container_01_4_01_4.html" title="is_suitable_container\l\&lt; std::queue\&lt; T, Container \&gt; \&gt;" alt="" coords="360,23,563,65"/>
+<area shape="rect" id="node5" href="$structis__suitable__container_3_01std_1_1stack_3_01_t_00_01_container_01_4_01_4.html" title="is_suitable_container\l\&lt; std::stack\&lt; T, Container \&gt; \&gt;" alt="" coords="361,89,561,130"/>
+</map>
