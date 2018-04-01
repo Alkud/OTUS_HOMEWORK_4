@@ -10,11 +10,18 @@ before_script:
 - sudo apt-get install g++-6 -y
 - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/source.list
+addons:
+  apt:
+    packages:
+      - doxygen
+      - doxygen-doc
+      - graphviz
 script:
 - cmake .
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
+- doxygen Doxyfile
 deploy:
   provider: script
   skip_cleanup: true
