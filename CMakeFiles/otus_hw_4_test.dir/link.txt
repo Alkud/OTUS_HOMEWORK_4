@@ -1,0 +1,1 @@
+/usr/bin/g++    -rdynamic CMakeFiles/otus_hw_4_test.dir/otus_hw_4_test.cpp.o  -o otus_hw_4_test -lboost_unit_test_framework libprocess.a 
