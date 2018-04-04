@@ -17,6 +17,7 @@
 
 #include <string>
 #include <type_traits>
+#include <utility>
 
 template <typename T>
 struct  is_suitable_container : std::false_type{};
@@ -138,26 +139,26 @@ std::integral_constant<
                       > {};
 
 
-static_assert(is_suitable_container<std::vector<std::string>>::value == true);
+static_assert(is_suitable_container<std::vector<std::string>>::value == true, "assert failed");
 
-static_assert(is_suitable_container<std::vector<int>>::value == true);
+static_assert(is_suitable_container<std::vector<int>>::value == true, "assert failed");
 
-static_assert(is_suitable_container<std::vector<std::vector<int>>>::value == false);
+static_assert(is_suitable_container<std::vector<std::vector<int>>>::value == false, "assert failed");
 
-static_assert(is_suitable_container<std::string>::value == false);
+static_assert(is_suitable_container<std::string>::value == false, "assert failed");
 
-static_assert(is_suitable_container<std::queue<int, std::map<int, int>>>::value == false);
+static_assert(is_suitable_container<std::queue<int, std::map<int, int>>>::value == false, "assert failed");
 
-static_assert(is_suitable_container<std::stack<int, std::multiset<double>>>::value == false);
+static_assert(is_suitable_container<std::stack<int, std::multiset<double>>>::value == false, "assert failed");
 
-static_assert (are_same<int, int, int, int, int>::value == true);
+static_assert (are_same<int, int, int, int, int>::value == true, "assert failed");
 
-static_assert (are_same<int, int, int, int, float>::value == false);
+static_assert (are_same<int, int, int, int, float>::value == false, "assert failed");
 
-static_assert (are_same<std::string, std::string, std::string, std::string, std::string>::value == true);
+static_assert (are_same<std::string, std::string, std::string, std::string, std::string>::value == true, "assert failed");
 
-static_assert (are_same<std::string, std::string, std::string, std::string, bool>::value == false);
+static_assert (are_same<std::string, std::string, std::string, std::string, bool>::value == false, "assert failed");
 
-static_assert (is_suitable_tuple<std::tuple<std::string, std::string, bool>>::value == false);
+static_assert (is_suitable_tuple<std::tuple<std::string, std::string, bool>>::value == false, "assert failed");
 
-static_assert (is_suitable_tuple<std::tuple<int, int, int>>::value == true);
+static_assert (is_suitable_tuple<std::tuple<int, int, int>>::value == true, "assert failed");

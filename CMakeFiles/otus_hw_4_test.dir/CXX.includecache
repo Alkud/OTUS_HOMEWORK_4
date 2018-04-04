@@ -29,6 +29,8 @@ string
 -
 type_traits
 -
+utility
+-
 
 /home/travis/build/Alkud/OTUS_HOMEWORK_4/otus_hw_4_test.cpp
 boost/test/unit_test.hpp
