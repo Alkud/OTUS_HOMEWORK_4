@@ -28,7 +28,7 @@ BOOST_AUTO_TEST_CASE(check_output_with_char)
     b0 = inputStringIdx - 127;
     testIntegers.push_back(b0);
     testAddresses.push_back(b0);
-    print_ip<char>(receiveStream, b0);
+    print_ip(receiveStream, b0);
   }
 
   size_t errorsCount{};
@@ -68,7 +68,7 @@ BOOST_AUTO_TEST_CASE(check_output_with_short)
     address = b1 << 8 | b0;
     testStrings.push_back(std::to_string(b1) + std::string{"."} + std::to_string(b0));
     testAddresses.push_back(address);
-    print_ip<short>(receiveStream, address);
+    print_ip(receiveStream, address);
   }
 
   size_t errorsCount{};
@@ -110,7 +110,7 @@ BOOST_AUTO_TEST_CASE(check_output_with_int)
                           + std::to_string(b2) + std::string{"."}
                           + std::to_string(b1) + std::string{"."} + std::to_string(b0));
     testAddresses.push_back(address);
-    print_ip<int>(receiveStream, address);
+    print_ip(receiveStream, address);
   }
 
   size_t errorsCount{};
@@ -272,7 +272,7 @@ BOOST_AUTO_TEST_CASE(check_output_with_vector)
 
     vector = std::vector<int>{b7, b6, b5, b4, b3, b2, b1, b0};
     testStrings.push_back(address);
-    print_ip<std::vector<int>>(receiveStream, vector);
+    print_ip(receiveStream, vector);
   }
 
   size_t errorsCount{};
@@ -328,7 +328,7 @@ BOOST_AUTO_TEST_CASE(check_output_with_tuple)
 
     tuple = std::tuple<int,int,int,int,int,int,int,int>{b7, b6, b5, b4, b3, b2, b1, b0};
     testStrings.push_back(address);
-    print_ip<std::tuple<int,int,int,int,int,int,int,int>>(receiveStream, tuple);
+    print_ip(receiveStream, tuple);
   }
 
   size_t errorsCount{};
@@ -353,19 +353,19 @@ BOOST_AUTO_TEST_CASE(check_output_homework)
 
   std::vector<std::string> testStrings{};
 
-  print_ip<char>(receiveStream, char{-1});
+  print_ip(receiveStream, char{-1});
   testStrings.push_back(std::string{"255"});
-  print_ip<short>(receiveStream, short{0});
+  print_ip(receiveStream, short{0});
   testStrings.push_back(std::string{"0.0"});
-  print_ip<int>(receiveStream, 2130706433);
+  print_ip(receiveStream, 2130706433);
   testStrings.push_back(std::string{"127.0.0.1"});
-  print_ip<long long>(receiveStream, 8875824491850138409);
+  print_ip(receiveStream, 8875824491850138409);
   testStrings.push_back(std::string{"123.45.67.89.101.112.131.41"});
-  print_ip<std::string>(receiveStream, "192.168.11.17.234.99");
+  print_ip(receiveStream,std::string{"192.168.11.17.234.99"});
   testStrings.push_back(std::string{"192.168.11.17.234.99"});
-  print_ip<std::vector<int>>(receiveStream, std::vector<int>{124,123,18,0});
+  print_ip(receiveStream, std::vector<int>{124,123,18,0});
   testStrings.push_back(std::string{"124.123.18.0"});
-  print_ip<std::tuple<char, char, char, char>>(receiveStream, std::tuple<char, char, char, char>{103, 19, 0, -1});
+  print_ip(receiveStream, std::tuple<char, char, char, char>{103, 19, 0, -1});
   testStrings.push_back(std::string{"103.19.0.255"});
 
   size_t errorsCount{};

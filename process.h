@@ -9,13 +9,13 @@
 //! print_ip template for integral types
 //! is only enabled if input value is of an integral type
 template<typename T>
-void print_ip (std::ostream& outputStream,
-               typename std::enable_if<std::is_integral<T>::value, T>::type input_value)
+void print_ip (std::ostream& outputStream, T inputValue,
+               typename std::enable_if<std::is_integral<T>::value, T>::type* = nullptr)
 {
   for (int idx{sizeof(T) - 1}; idx >= 0; idx--)
   {
     ///extract octets
-    int octet{static_cast<uint8_t>((input_value >> (8 * idx))&0xFF)};
+    int octet{static_cast<uint8_t>((inputValue >> (8 * idx))&0xFF)};
     outputStream << ( octet );
     if (idx != 0)
       outputStream << ".";
@@ -27,14 +27,14 @@ void print_ip (std::ostream& outputStream,
 //! is only enabled if input value is of a suitable type:
 //! container and stored data should be suitable for keeping ip addresses
 template<typename T>
-void print_ip (std::ostream& outputStream,
-               typename std::enable_if<is_suitable_container<T>::value, T>::type input_value)
+void print_ip (std::ostream& outputStream, T inputValue,
+               typename std::enable_if<is_suitable_container<T>::value, T>::type* = nullptr)
 {
-  for (auto& item : input_value)
+  for (auto& item : inputValue)
   {
     int octet{static_cast<uint8_t>(item)};
     outputStream << octet;
-    if (&item != &(*(input_value).rbegin()))
+    if (std::addressof(item) != std::addressof(*inputValue.rbegin()))
       outputStream << ".";
   }
   outputStream << std::endl;
@@ -43,11 +43,11 @@ void print_ip (std::ostream& outputStream,
 //! print_ip template for string type
 //! is only enabled if input value is of std::string type
 template<typename T>
-void print_ip (std::ostream& outputStream,
-               typename std::enable_if<std::is_same<T, std::string>::value, T>::type input_value)
+void print_ip (std::ostream& outputStream, T inputValue,
+               typename std::enable_if<std::is_same<T, std::string>::value, T>::type* = nullptr)
 {
   /// output as is
-  outputStream << input_value;
+  outputStream << inputValue;
   outputStream << std::endl;
 }
 
@@ -88,11 +88,13 @@ void printTuple(std::ostream& outputStream,
 //! print_ip template for tuple type
 //! template specialization for one member tuple
 template<typename T>
-void print_ip (std::ostream& outputStream,
-               typename std::enable_if<is_suitable_tuple<T>::value, T>::type input_value)
+void print_ip (std::ostream& outputStream, T inputValue,
+               typename std::enable_if<is_suitable_tuple<T>::value, T>::type* = nullptr)
 {
-  printTuple(outputStream, input_value);
+  printTuple(outputStream, inputValue);
   outputStream << std::endl;
 }
+
+
 
 void process(std::ostream& outputStream);
