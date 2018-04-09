@@ -109,15 +109,21 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7346d92ccede8ddb0e4740b998db1b6e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7346d92ccede8ddb0e4740b998db1b6e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="process_8h.html#a7346d92ccede8ddb0e4740b998db1b6e">print_ip</a> (std::ostream &amp;outputStream, T inputValue, typename std::enable_if&lt; std::is_integral&lt; T &gt;::value, T &gt;::type *=nullptr)</td></tr>
-<tr class="separator:a7346d92ccede8ddb0e4740b998db1b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20ff0a34e1ee6480457b1ac503a132dc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a20ff0a34e1ee6480457b1ac503a132dc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="process_8h.html#a20ff0a34e1ee6480457b1ac503a132dc">print_ip</a> (std::ostream &amp;outputStream, T inputValue, typename std::enable_if&lt; <a class="el" href="structis__suitable__container.html">is_suitable_container</a>&lt; T &gt;::value, T &gt;::type *=nullptr)</td></tr>
-<tr class="separator:a20ff0a34e1ee6480457b1ac503a132dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ab1ac26e589167c7134a9129ba03f77"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3ab1ac26e589167c7134a9129ba03f77"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="process_8h.html#a3ab1ac26e589167c7134a9129ba03f77">print_ip</a> (std::ostream &amp;outputStream, T inputValue, typename std::enable_if&lt; std::is_same&lt; T, std::string &gt;::value, T &gt;::type *=nullptr)</td></tr>
-<tr class="separator:a3ab1ac26e589167c7134a9129ba03f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad06322a36addd62d797573d471d44dc5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad06322a36addd62d797573d471d44dc5"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; std::is_integral&lt; T &gt;::value &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="process_8h.html#ad06322a36addd62d797573d471d44dc5">print_ip</a> (std::ostream &amp;outputStream, T inputValue)</td></tr>
+<tr class="separator:ad06322a36addd62d797573d471d44dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20fdde3771a94929d90fc03ffe3d9d26"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a20fdde3771a94929d90fc03ffe3d9d26"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; <a class="el" href="structis__suitable__container.html">is_suitable_container</a>&lt; T &gt;<br class="typebreak"/>
+::value &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="process_8h.html#a20fdde3771a94929d90fc03ffe3d9d26">print_ip</a> (std::ostream &amp;outputStream, T inputValue)</td></tr>
+<tr class="separator:a20fdde3771a94929d90fc03ffe3d9d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef5a8bf115d6906b83e9a3fcf17f445"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9ef5a8bf115d6906b83e9a3fcf17f445"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same<br class="typebreak"/>
+&lt; T, std::string &gt;::value &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="process_8h.html#a9ef5a8bf115d6906b83e9a3fcf17f445">print_ip</a> (std::ostream &amp;outputStream, T inputValue)</td></tr>
+<tr class="separator:a9ef5a8bf115d6906b83e9a3fcf17f445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ebf3750670de2c693b96766d4bed755"><td class="memTemplParams" colspan="2">template&lt;std::size_t... indices, typename... Types&gt; </td></tr>
 <tr class="memitem:a9ebf3750670de2c693b96766d4bed755"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="process_8h.html#a9ebf3750670de2c693b96766d4bed755">getTupleTail_Helper</a> (std::index_sequence&lt; indices...&gt;, const std::tuple&lt; Types...&gt; &amp;aTuple)</td></tr>
 <tr class="separator:a9ebf3750670de2c693b96766d4bed755"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,9 +136,11 @@ Functions</h2></td></tr>
 <tr class="memitem:ad95d3caa81025e3f4abeb0508bd38944"><td class="memTemplParams" colspan="2">template&lt;typename HeadType , typename... TailTypes&gt; </td></tr>
 <tr class="memitem:ad95d3caa81025e3f4abeb0508bd38944"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="process_8h.html#ad95d3caa81025e3f4abeb0508bd38944">printTuple</a> (std::ostream &amp;outputStream, const std::tuple&lt; HeadType, TailTypes...&gt; &amp;aTuple)</td></tr>
 <tr class="separator:ad95d3caa81025e3f4abeb0508bd38944"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9741cf7061b341264fa5e616e369aa8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac9741cf7061b341264fa5e616e369aa8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="process_8h.html#ac9741cf7061b341264fa5e616e369aa8">print_ip</a> (std::ostream &amp;outputStream, T inputValue, typename std::enable_if&lt; <a class="el" href="structis__suitable__tuple.html">is_suitable_tuple</a>&lt; T &gt;::value, T &gt;::type *=nullptr)</td></tr>
-<tr class="separator:ac9741cf7061b341264fa5e616e369aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac48b8d86476517e5de56f6337e5d66ef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac48b8d86476517e5de56f6337e5d66ef"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if<br class="typebreak"/>
+&lt; <a class="el" href="structis__suitable__tuple.html">is_suitable_tuple</a>&lt; T &gt;<br class="typebreak"/>
+::value &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="process_8h.html#ac48b8d86476517e5de56f6337e5d66ef">print_ip</a> (std::ostream &amp;outputStream, T inputValue)</td></tr>
+<tr class="separator:ac48b8d86476517e5de56f6337e5d66ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ad4b3a8cb719d0f8ba74983c4c95f96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8h.html#a1ad4b3a8cb719d0f8ba74983c4c95f96">process</a> (std::ostream &amp;outputStream)</td></tr>
 <tr class="separator:a1ad4b3a8cb719d0f8ba74983c4c95f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -185,14 +193,14 @@ template&lt;std::size_t... indices, typename... Types&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7346d92ccede8ddb0e4740b998db1b6e"></a>
+<a class="anchor" id="ad06322a36addd62d797573d471d44dc5"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void print_ip </td>
+          <td class="memname">std::enable_if&lt;std::is_integral&lt;T&gt;::value&gt;::type print_ip </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>outputStream</em>, </td>
@@ -201,13 +209,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>inputValue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename std::enable_if&lt; std::is_integral&lt; T &gt;::value, T &gt;::type *&#160;</td>
-          <td class="paramname"> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>inputValue</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -221,14 +223,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a20ff0a34e1ee6480457b1ac503a132dc"></a>
+<a class="anchor" id="a20fdde3771a94929d90fc03ffe3d9d26"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void print_ip </td>
+          <td class="memname">std::enable_if&lt;<a class="el" href="structis__suitable__container.html">is_suitable_container</a>&lt;T&gt;::value&gt;::type print_ip </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>outputStream</em>, </td>
@@ -237,13 +239,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>inputValue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename std::enable_if&lt; <a class="el" href="structis__suitable__container.html">is_suitable_container</a>&lt; T &gt;::value, T &gt;::type *&#160;</td>
-          <td class="paramname"> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>inputValue</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -256,14 +252,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a3ab1ac26e589167c7134a9129ba03f77"></a>
+<a class="anchor" id="a9ef5a8bf115d6906b83e9a3fcf17f445"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void print_ip </td>
+          <td class="memname">std::enable_if&lt;std::is_same&lt;T, std::string&gt;::value&gt;::type print_ip </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>outputStream</em>, </td>
@@ -272,13 +268,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>inputValue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename std::enable_if&lt; std::is_same&lt; T, std::string &gt;::value, T &gt;::type *&#160;</td>
-          <td class="paramname"> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>inputValue</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -292,14 +282,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac9741cf7061b341264fa5e616e369aa8"></a>
+<a class="anchor" id="ac48b8d86476517e5de56f6337e5d66ef"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void print_ip </td>
+          <td class="memname">std::enable_if&lt;<a class="el" href="structis__suitable__tuple.html">is_suitable_tuple</a>&lt;T&gt;::value&gt;::type print_ip </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>outputStream</em>, </td>
@@ -308,13 +298,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>inputValue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename std::enable_if&lt; <a class="el" href="structis__suitable__tuple.html">is_suitable_tuple</a>&lt; T &gt;::value, T &gt;::type *&#160;</td>
-          <td class="paramname"> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>inputValue</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

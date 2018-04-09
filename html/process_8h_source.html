@@ -94,8 +94,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="process_8h.html#a7346d92ccede8ddb0e4740b998db1b6e">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="process_8h.html#a7346d92ccede8ddb0e4740b998db1b6e">print_ip</a> (std::ostream&amp; outputStream, T inputValue,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;               <span class="keyword">typename</span> std::enable_if&lt;std::is_integral&lt;T&gt;::value, T&gt;::type* = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">typename</span> std::enable_if&lt;std::is_integral&lt;T&gt;::value&gt;::type</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="process_8h.html#ad06322a36addd62d797573d471d44dc5">   13</a></span>&#160;<a class="code" href="process_8h.html#ad06322a36addd62d797573d471d44dc5">print_ip</a> (std::ostream&amp; outputStream, T inputValue)</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx{<span class="keyword">sizeof</span>(T) - 1}; idx &gt;= 0; idx--)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  {</div>
@@ -108,8 +108,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="process_8h.html#a20ff0a34e1ee6480457b1ac503a132dc">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="process_8h.html#a7346d92ccede8ddb0e4740b998db1b6e">print_ip</a> (std::ostream&amp; outputStream, T inputValue,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;               <span class="keyword">typename</span> std::enable_if&lt;<a class="code" href="structis__suitable__container.html">is_suitable_container&lt;T&gt;::value</a>, T&gt;::type* = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">typename</span> std::enable_if&lt;is_suitable_container&lt;T&gt;::value&gt;::type</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="process_8h.html#a20fdde3771a94929d90fc03ffe3d9d26">   31</a></span>&#160;<a class="code" href="process_8h.html#ad06322a36addd62d797573d471d44dc5">print_ip</a> (std::ostream&amp; outputStream, T inputValue)</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; item : inputValue)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  {</div>
@@ -122,8 +122,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="process_8h.html#a3ab1ac26e589167c7134a9129ba03f77">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="process_8h.html#a7346d92ccede8ddb0e4740b998db1b6e">print_ip</a> (std::ostream&amp; outputStream, T inputValue,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;               <span class="keyword">typename</span> std::enable_if&lt;std::is_same&lt;T, std::string&gt;::value, T&gt;::type* = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">typename</span> std::enable_if&lt;std::is_same&lt;T, std::string&gt;::value&gt;::type</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="process_8h.html#a9ef5a8bf115d6906b83e9a3fcf17f445">   47</a></span>&#160;<a class="code" href="process_8h.html#ad06322a36addd62d797573d471d44dc5">print_ip</a> (std::ostream&amp; outputStream, T inputValue)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  outputStream &lt;&lt; inputValue;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  outputStream &lt;&lt; std::endl;</div>
@@ -155,8 +155,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="process_8h.html#ac9741cf7061b341264fa5e616e369aa8">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="process_8h.html#a7346d92ccede8ddb0e4740b998db1b6e">print_ip</a> (std::ostream&amp; outputStream, T inputValue,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;               <span class="keyword">typename</span> std::enable_if&lt;<a class="code" href="structis__suitable__tuple.html">is_suitable_tuple&lt;T&gt;::value</a>, T&gt;::type* = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">typename</span> std::enable_if&lt;is_suitable_tuple&lt;T&gt;::value&gt;::type</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="process_8h.html#ac48b8d86476517e5de56f6337e5d66ef">   92</a></span>&#160;<a class="code" href="process_8h.html#ad06322a36addd62d797573d471d44dc5">print_ip</a> (std::ostream&amp; outputStream,  T inputValue)</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="process_8h.html#a53ce9a7c9dcd81770ece6acd1721b8e8">printTuple</a>(outputStream, inputValue);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  outputStream &lt;&lt; std::endl;</div>
@@ -167,12 +167,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">void</span> <a class="code" href="process_8h.html#a1ad4b3a8cb719d0f8ba74983c4c95f96">process</a>(std::ostream&amp; outputStream);</div>
 <div class="ttc" id="is__suitable__container_8h_html"><div class="ttname"><a href="is__suitable__container_8h.html">is_suitable_container.h</a></div></div>
 <div class="ttc" id="process_8h_html_a53ce9a7c9dcd81770ece6acd1721b8e8"><div class="ttname"><a href="process_8h.html#a53ce9a7c9dcd81770ece6acd1721b8e8">printTuple</a></div><div class="ttdeci">void printTuple(std::ostream &amp;, const std::tuple&lt;&gt; &amp;)</div><div class="ttdoc">print_ip template declaration for tuple type </div><div class="ttdef"><b>Definition:</b> process.cpp:5</div></div>
-<div class="ttc" id="structis__suitable__tuple_html"><div class="ttname"><a href="structis__suitable__tuple.html">is_suitable_tuple</a></div><div class="ttdef"><b>Definition:</b> is_suitable_container.h:118</div></div>
 <div class="ttc" id="process_8h_html_a6a2cec771bd6722eb24c3d627c43b72e"><div class="ttname"><a href="process_8h.html#a6a2cec771bd6722eb24c3d627c43b72e">getTupleTail</a></div><div class="ttdeci">auto getTupleTail(const std::tuple&lt; Types...&gt; &amp;aTuple)</div><div class="ttdef"><b>Definition:</b> process.h:65</div></div>
 <div class="ttc" id="process_8h_html_a1ad4b3a8cb719d0f8ba74983c4c95f96"><div class="ttname"><a href="process_8h.html#a1ad4b3a8cb719d0f8ba74983c4c95f96">process</a></div><div class="ttdeci">void process(std::ostream &amp;outputStream)</div><div class="ttdef"><b>Definition:</b> process.cpp:10</div></div>
-<div class="ttc" id="structis__suitable__container_html"><div class="ttname"><a href="structis__suitable__container.html">is_suitable_container</a></div><div class="ttdoc">List of container types suitable for keeping an ip address */. </div><div class="ttdef"><b>Definition:</b> is_suitable_container.h:23</div></div>
+<div class="ttc" id="process_8h_html_ad06322a36addd62d797573d471d44dc5"><div class="ttname"><a href="process_8h.html#ad06322a36addd62d797573d471d44dc5">print_ip</a></div><div class="ttdeci">std::enable_if&lt; std::is_integral&lt; T &gt;::value &gt;::type print_ip(std::ostream &amp;outputStream, T inputValue)</div><div class="ttdef"><b>Definition:</b> process.h:13</div></div>
 <div class="ttc" id="process_8h_html_a9ebf3750670de2c693b96766d4bed755"><div class="ttname"><a href="process_8h.html#a9ebf3750670de2c693b96766d4bed755">getTupleTail_Helper</a></div><div class="ttdeci">auto getTupleTail_Helper(std::index_sequence&lt; indices...&gt;, const std::tuple&lt; Types...&gt; &amp;aTuple)</div><div class="ttdef"><b>Definition:</b> process.h:57</div></div>
-<div class="ttc" id="process_8h_html_a7346d92ccede8ddb0e4740b998db1b6e"><div class="ttname"><a href="process_8h.html#a7346d92ccede8ddb0e4740b998db1b6e">print_ip</a></div><div class="ttdeci">void print_ip(std::ostream &amp;outputStream, T inputValue, typename std::enable_if&lt; std::is_integral&lt; T &gt;::value, T &gt;::type *=nullptr)</div><div class="ttdef"><b>Definition:</b> process.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -17,10 +17,15 @@ set (BOOST_MIN_VERSION "1.54.0")
 #Find Boost UTF component, get BOOST_LIBRARIES and BOOST_INCLUDE_DIR values
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
+
 #Set library target
 add_library(is_suitable_container INTERFACE)
 target_sources(is_suitable_container INTERFACE ${PROJECT_SOURCE_DIR}/is_suitable_container.h)
 target_include_directories(is_suitable_container INTERFACE ${PROJECT_SOURCE_DIR})
+
+add_library(spdlog INTERFACE)
+target_sources(spdlog INTERFACE /usr/include/spdlog/spdlog.h)
+target_include_directories(spdlog INTERFACE /usr/include/spdlog)
 
 add_library(process process.cpp)
 
