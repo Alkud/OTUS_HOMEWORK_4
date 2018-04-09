@@ -164,7 +164,7 @@ BOOST_AUTO_TEST_CASE(check_output_with_long)
                           + std::to_string(b2) + std::string{"."}
                           + std::to_string(b1) + std::string{"."} + std::to_string(b0));
     testAddresses.push_back(address);
-    print_ip<long long>(receiveStream, address);
+    print_ip(receiveStream, address);
   }
 
   size_t errorsCount{};
@@ -217,7 +217,7 @@ BOOST_AUTO_TEST_CASE(check_output_with_string)
               + std::to_string(b2) + std::string{"."}
               + std::to_string(b1) + std::string{"."} + std::to_string(b0);
     testStrings.push_back(address);
-    print_ip<std::string>(receiveStream, address);
+    print_ip(receiveStream, address);
   }
 
   size_t errorsCount{};

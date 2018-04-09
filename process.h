@@ -9,8 +9,8 @@
 //! print_ip template for integral types
 //! is only enabled if input value is of an integral type
 template<typename T>
-void print_ip (std::ostream& outputStream, T inputValue,
-               typename std::enable_if<std::is_integral<T>::value, T>::type* = nullptr)
+typename std::enable_if<std::is_integral<T>::value>::type
+print_ip (std::ostream& outputStream, T inputValue)
 {
   for (int idx{sizeof(T) - 1}; idx >= 0; idx--)
   {
@@ -27,8 +27,8 @@ void print_ip (std::ostream& outputStream, T inputValue,
 //! is only enabled if input value is of a suitable type:
 //! container and stored data should be suitable for keeping ip addresses
 template<typename T>
-void print_ip (std::ostream& outputStream, T inputValue,
-               typename std::enable_if<is_suitable_container<T>::value, T>::type* = nullptr)
+typename std::enable_if<is_suitable_container<T>::value>::type
+print_ip (std::ostream& outputStream, T inputValue)
 {
   for (auto& item : inputValue)
   {
@@ -43,8 +43,8 @@ void print_ip (std::ostream& outputStream, T inputValue,
 //! print_ip template for string type
 //! is only enabled if input value is of std::string type
 template<typename T>
-void print_ip (std::ostream& outputStream, T inputValue,
-               typename std::enable_if<std::is_same<T, std::string>::value, T>::type* = nullptr)
+typename std::enable_if<std::is_same<T, std::string>::value>::type
+print_ip (std::ostream& outputStream, T inputValue)
 {
   /// output as is
   outputStream << inputValue;
@@ -88,8 +88,8 @@ void printTuple(std::ostream& outputStream,
 //! print_ip template for tuple type
 //! template specialization for one member tuple
 template<typename T>
-void print_ip (std::ostream& outputStream, T inputValue,
-               typename std::enable_if<is_suitable_tuple<T>::value, T>::type* = nullptr)
+typename std::enable_if<is_suitable_tuple<T>::value>::type
+print_ip (std::ostream& outputStream,  T inputValue)
 {
   printTuple(outputStream, inputValue);
   outputStream << std::endl;
